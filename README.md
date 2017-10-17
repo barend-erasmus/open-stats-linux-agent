@@ -8,7 +8,7 @@ Install via npm
 
 Install as systemd service
 
-`sudo open-stats-linux-agent-install`
+`sudo open-stats-linux-agent-install --token 6073fec2-03d1-4f51-850f-c656417bc6f0`
 
 `systemctl enable open-stats-linux-agent.service`
 
@@ -52,8 +52,3 @@ Start systemd service
 * Machine.${hostname}.Disk.${mount}.minimum
 * Machine.${hostname}.Disk.${mount}.maximum
 * Machine.${hostname}.Disk.${mount}.standardDeviation
-
-## View Metrics on Chart
-
-`http://open-stats.openservices.co.za/chart?names=Machine.${hostname}.CPU.mean|Machine.${hostname}.CPU.median|Machine.${hostname}.CPU.minimum|Machine.${hostname}.CPU.minimum|Machine.${hostname}.CPU.maximum|Machine.${hostname}.CPU.standardDeviation`
-
