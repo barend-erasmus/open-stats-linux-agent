@@ -53,3 +53,7 @@ Start systemd service
 * Machine.${hostname}.Disk.${mount}.maximum
 * Machine.${hostname}.Disk.${mount}.standardDeviation
 
+## View Metrics on Chart
+
+`http://open-stats.openservices.co.za/chart?names=Machine.${hostname}.CPU.mean|Machine.${hostname}.CPU.median|Machine.${hostname}.CPU.minimum|Machine.${hostname}.CPU.minimum|Machine.${hostname}.CPU.maximum|Machine.${hostname}.CPU.standardDeviation`
+
