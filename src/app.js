@@ -12,14 +12,14 @@ const job = new cron.CronJob('*/10 * * * * *', () => {
     // Send CPU Usage
     si.currentLoad((data) => {
         const value = data.currentload;
-        sdc.gauge('CPU', value);
+        sdc.timing('CPU', value);
         console.log(`CPU: ${value}`);
     });
 
     // Send Memory Usage
     si.mem((data) => {
         const value = data.used / data.total * 100;
-        sdc.gauge('Memory', value);
+        sdc.timing('Memory', value);
         console.log(`Memory: ${value}`);
     });
 
@@ -27,7 +27,7 @@ const job = new cron.CronJob('*/10 * * * * *', () => {
     si.fsSize((data) => {
         for (const disk of data) {
             const value = disk.use;
-            sdc.gauge(`Disk.${disk.mount}`, value);
+            sdc.timing(`Disk.${disk.mount}`, value);
             console.log(`Disk.${disk.mount}: ${value}`);
         }
     });
