@@ -1,5 +1,21 @@
 # Open Stats Linux Agent
 
+## Installation
+
+Install via npm
+
+`npm install -g open-stats-linux-agent`
+
+Install as systemd service
+
+`sudo open-stats-linux-agent-install`
+
+`systemctl enable open-stats-linux-agent.service`
+
+Start systemd service
+
+`systemctl start open-stats-linux-agent.service`
+
 ## CPU Usage
 
 * Metric Name: `Machine.${hostname}.CPU`
