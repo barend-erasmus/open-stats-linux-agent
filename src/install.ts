@@ -1,9 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const fs = require("fs");
-const path = require("path");
-const yargs = require("yargs");
+import * as fs from 'fs';
+import * as path from 'path';
+import * as yargs from 'yargs';
+
 const argv = yargs.argv;
+
 fs.writeFileSync('/etc/systemd/system/open-stats-linux-agent.service', `
 [Unit]
 Description=Open Stats Linux Agent
@@ -17,4 +17,6 @@ RestartSec=10
 [Install]
 WantedBy=multi-user.target
 `);
-//# sourceMappingURL=install.js.map
+
+// systemctl enable open-stats-linux-agent.service
+// systemctl start open-stats-linux-agent.service
